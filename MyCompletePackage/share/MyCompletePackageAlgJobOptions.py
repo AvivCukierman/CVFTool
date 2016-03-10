@@ -1,7 +1,7 @@
 #Skeleton joboption for a simple analysis job
 
 theApp.EvtMax=10                                         #says how many events to run over. Set to -1 for all events
-include ("RecExCommon/RecExCommon_topOptions.py")
+#include ("RecExCommon/RecExCommon_topOptions.py")
 
 import AthenaPoolCnvSvc.ReadAthenaPool                   #sets up reading of POOL files (e.g. xAODs)
 svcMgr.EventSelector.InputCollections=["/afs/cern.ch/user/a/acukierm/Datasets/AOD.05771185._000079.pool.root.1"]   #insert your list of input files here
