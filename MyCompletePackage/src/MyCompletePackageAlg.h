@@ -2,7 +2,7 @@
 #define MYCOMPLETEPACKAGE_MYCOMPLETEPACKAGEALG_H 1
 
 #include "AthAnalysisBaseComps/AthAnalysisAlgorithm.h"
-#include "JetRecTools/JetRecTools/CVFTool.h"
+//#include "JetRecTools/JetRecTools/CVFTool.h"
 //#include "JetRecTools/JetRecTools/JetTrackSelectionTool.h"
 #include "eflowRec/eflowTrackCaloExtensionTool.h"
 #include "eflowRec/eflowTrackExtrapolatorBaseAlgTool.h"
