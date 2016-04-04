@@ -47,12 +47,14 @@ StatusCode MyCompletePackageAlg::finalize() {
 StatusCode MyCompletePackageAlg::execute() {  
   ATH_MSG_DEBUG ("Executing " << name() << "...");
 
-  std::string m_trackContainer = "InDetForwardTrackParticles";
+  std::string m_trackContainer = "InDetTrackParticles";
+  //std::cout << evtStore()->dump() << std::endl;
   const xAOD::TrackParticleContainer* tracks(nullptr);
   if(evtStore()->retrieve(tracks,m_trackContainer).isFailure()) ATH_MSG_ERROR("Could not retrieve the tracks.");
   std::cout << "Tracks" << std::endl;
   for(auto track: *tracks){
     std::cout << "t: " << track->pt() << std::endl;
+    break;
     //m_theTrackExtrapolatorTool->execute(track);
   }
   /*m_CVFTool->execute();
