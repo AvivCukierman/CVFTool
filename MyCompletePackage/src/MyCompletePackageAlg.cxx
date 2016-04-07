@@ -1,5 +1,6 @@
 // MyCompletePackage includes
 #include "MyCompletePackageAlg.h"
+#include "eflowRec/eflowTrackCaloPoints.h"
 
 
 
@@ -54,8 +55,11 @@ StatusCode MyCompletePackageAlg::execute() {
   std::cout << "Tracks" << std::endl;
   for(auto track: *tracks){
     std::cout << "t: " << track->pt() << std::endl;
-    break;
-    //m_theTrackExtrapolatorTool->execute(track);
+    std::cout << "coords: " << track->eta() << ";" << track->phi() << std::endl;
+    eflowTrackCaloPoints* extrapolated = m_theTrackExtrapolatorTool->execute(track);
+    double neweta = extrapolated->getEtaPhiPos(eflowCalo::LAYER::EMB1).getEta();
+    double newphi = extrapolated->getEtaPhiPos(eflowCalo::LAYER::EMB1).getPhiD();
+    std::cout << "new: " << neweta << ";" << newphi << std::endl;
   }
   /*m_CVFTool->execute();
 
