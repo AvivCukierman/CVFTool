@@ -6,6 +6,7 @@
 //#include "JetRecTools/JetRecTools/JetTrackSelectionTool.h"
 #include "eflowRec/eflowTrackCaloExtensionTool.h"
 #include "eflowRec/eflowTrackExtrapolatorBaseAlgTool.h"
+#include "eflowRec/eflowTrackCaloPoints.h"
 #include "RecoToolInterfaces/IParticleCaloExtensionTool.h"
 
 #include "xAODTracking/TrackParticle.h"
